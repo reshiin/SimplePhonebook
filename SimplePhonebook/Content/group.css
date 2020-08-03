@@ -1,0 +1,17 @@
+﻿.modal-dialog {
+  height: 500px; /* = 90% of the .modal-backdrop block = %90 of the screen */
+}
+.modal-content {
+  height: 600px; /* = 100% of the .modal-dialog block */
+}
+.breadcrumb-modal {
+    padding: 2px 15px !important;
+}
+
+.btn-controls {
+    width:40% ;
+}
+
+select {
+    height:160% !important;
+}

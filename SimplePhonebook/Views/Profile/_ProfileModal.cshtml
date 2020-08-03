@@ -1,0 +1,77 @@
+﻿
+<div class="modal fade" id="modalAddNew" tabindex="-1" role="dialog" aria-hidden="true" data-keyboard="false" data-backdrop="static">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modal title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="row">
+                            <div class="col-md-12 text-center div-image">
+                                <img id="imgPreview" class="border border-dark" height="150" width="150" src="~/Content/Images/default-profile-picture.jpg" />
+                            </div>
+                        </div>
+                        <div class="row pb-3 pt-1">
+                            <div class="col-md-12 text-center">
+                                <input type="file" id="fileUpload" name="image" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="row pb-2">
+                            <div class="col-md-4">Contact Name: </div>
+                            <input type="text" class="form-control form-control-sm col-md-7" maxlength="25" id="txtFullName" />
+                        </div>
+                        <div class="row pb-2">
+                            <div class="col-md-4">Email Address: </div>
+                            <input type="text" class="form-control form-control-sm col-md-7" maxlength="50" id="txtEmail" />
+                        </div>
+                        <div class="row pb-2">
+                            <div class="col-md-4">Home Address: </div>
+                            <input type="text" class="form-control form-control-sm col-md-7" maxlength="255" id="txtHomeAddress" />
+                        </div>
+                        <div class="row pb-4">
+                            <div class="col-md-4">Groups: </div>
+                            <select class="form-control selectpicker col-md-7" multiple data-actions-box="true" maxlength="50" id="ddlGroups"></select>
+                        </div>
+                    </div>
+                </div>
+                <div class="row pb-1">
+                    <nav aria-label="breadcrumb" class="col-md-12">
+                        <ol class="breadcrumb breadcrumb-modal">
+                            <li class="breadcrumb-item active" aria-current="page">Contact Numbers</li>
+                        </ol>
+                    </nav>
+                </div>
+                <div class="row pb-2">
+                    <div class="col-md-12 text-right">
+                        <input type="button" id="btnAddContact" class="btn btn-sm btn-primary" value="Add Contact Number" />
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table id="tblContactNumbers" class="table table-sm table-bordered">
+                            <thead class="bg-light">
+                                <tr>
+                                    <td align="center">Type</td>
+                                    <td align="center">Number</td>
+                                    <td align="center">Actions</td>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-save">Save</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

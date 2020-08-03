@@ -1,0 +1,15 @@
+﻿.fa-edit {
+    color:blue;
+}
+
+.fa-check {
+    color:darkseagreen;
+}
+
+.fa-trash-o {
+    color:red;
+}
+
+.breadcrumb-modal {
+    padding: 2px 15px !important;
+}

@@ -1,0 +1,81 @@
+﻿
+@model  SimplePhonebook.Models.ProfileViewModel
+@{
+    ViewBag.Title = "Contacts";
+}
+
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item active" aria-current="page">Contacts</li>
+    </ol>
+</nav>
+<div class="row pb-3">
+    @using (Html.BeginForm("Search", "Profile", FormMethod.Post, new { @class = "col-md-12" }))
+    {
+        <div class="row">
+            <div class="col-md-3">
+                @Html.TextBoxFor(m => m.Profile.FullName, new { @class = "form-control form-control-sm", @placeholder = "Search Contact Name" })
+            </div>
+            <div class="col-md-3">
+                <input type="submit" class="btn btn-sm btn-primary" id="btnSearch" value="Search" />
+                <input type="button" class="btn btn-sm btn-primary" id="btnAddNew" value="Add New" />
+            </div>
+        </div>
+    }
+</div>
+<div class="row">
+    <div class="col-md-12">
+        <table id="tblProfiles" class="table table-bordered">
+            <thead class="bg-info">
+                <tr>
+                    <th></th>
+                    <td>Contact Name</td>
+                    <td>Email Address</td>
+                    <td>Home Address</td>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Profiles.Count > 0)
+                {
+                    foreach (var item in Model.Profiles)
+                    {
+                        <tr>
+                            <td><input type="checkbox" id="@item.Id" class="checkbox-item" /></td>
+                            <td><a id="@item.Id" class="link-fullname" href="#">@item.FullName</a></td>
+                            <td>@item.Email</td>
+                            <td>@item.HomeAddress</td>
+                        </tr>
+                    }
+                }
+                else
+                {
+                    <tr>
+                        <td colspan="4" align="center">No records found</td>
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 text-right float-right">
+        <input type="button" id="btnDelete" value="Delete" class="btn btn-sm btn-danger"/>
+    </div>
+</div>
+
+@Html.Partial("_ProfileModal")
+@section scripts {
+    <script src="~/Scripts/profile.js"></script>
+    <script>
+        $(document).ready(function () {
+            var contextRoot = '@Url.Action(string.Empty)' + '/';
+            var contentRoot = "@Url.Content("~")";
+            profile.init(contextRoot, contentRoot);
+        });
+    </script>
+}
+
+@section styles {
+    <link href="~/Content/profile.css" rel="stylesheet" />
+}
