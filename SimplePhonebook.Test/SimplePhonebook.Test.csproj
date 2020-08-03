@@ -69,12 +69,6 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\SimplePhonebook.Data.csproj">
-      <Project>{15AAB0D1-CBCC-447A-954E-0785F6A053D7}</Project>
-      <Name>SimplePhonebook.Data</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>

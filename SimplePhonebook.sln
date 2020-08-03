@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePhonebook", "SimplePh
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePhonebook.Test", "SimplePhonebook.Test\SimplePhonebook.Test.csproj", "{A9B80F6C-816A-4972-9648-D8A269B902D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePhonebook.Data", "ClassLibrary1\SimplePhonebook.Data.csproj", "{15AAB0D1-CBCC-447A-954E-0785F6A053D7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimplePhonebook.Data", "SimplePhonebook.Data\SimplePhonebook.Data.csproj", "{15AAB0D1-CBCC-447A-954E-0785F6A053D7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

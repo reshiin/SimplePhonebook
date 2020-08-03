@@ -484,7 +484,7 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ClassLibrary1\SimplePhonebook.Data.csproj">
+    <ProjectReference Include="..\SimplePhonebook.Data\SimplePhonebook.Data.csproj">
       <Project>{15AAB0D1-CBCC-447A-954E-0785F6A053D7}</Project>
       <Name>SimplePhonebook.Data</Name>
     </ProjectReference>
